@@ -1,12 +1,17 @@
 package com.qa.testscript;
+<<<<<<< HEAD
 import java.util.concurrent.TimeUnit;
+=======
+>>>>>>> 3bce4fe18223f46f6adc934af941ecb7b94df505
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.ITestContext;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+<<<<<<< HEAD
 import com.qa.pages.AddToCart_Pages;
 import com.qa.pages.Address_Pages;
 import com.qa.pages.Cart_ByProducts__Pages;
@@ -68,4 +73,30 @@ public class TestBase {
 		
 	}
 }
+=======
+import com.qa.pages.support_pages;
 
+public class TestBase<signin_pages> {
+
+	static WebDriver driver;
+	
+	support_pages support_pages ;
+
+@BeforeClass
+public WebDriver setup() {
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Meghana\\Desktop\\selenium software\\chromedriver.exe");
+	driver=new ChromeDriver();
+	driver.get("http://automationpractice.com/index.php");
+	return driver;
+	
+}
+	
+	   @AfterClass
+	    public void tearDown() {
+	    	//close browser
+	    	driver.close();
+	    }
+>>>>>>> 3bce4fe18223f46f6adc934af941ecb7b94df505
+
+	  
+}
