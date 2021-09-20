@@ -31,10 +31,10 @@ public class Wishlist_Test extends TestBase{
 		 String ConfirmationText=wish.getProduct().getText();
 		 
 		 if(ConfirmationText.contains("Printed dress")) {
-			   System.out.println("Order Completed: Test Case Passed");
+			   Reporter.log("Order Completed: Test Case Passed");
 			  }
 			  else {
-			   System.out.println("Order Not Successfull: Test Case Failed");
+			   Reporter.log("Order Not Successfull: Test Case Failed");
 			  }
 		 //deleting product from wishlist
 		 wish.getDeleteProduct().click();
