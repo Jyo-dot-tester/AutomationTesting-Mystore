@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class Tc_006_Product_remove_cart extends TestBase{
+public class TC_005_Product_remove_cart extends TestBase{
 
 	@Test
 	public void delete_item_cart() throws InterruptedException

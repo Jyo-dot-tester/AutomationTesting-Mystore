@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class TC_006_Address extends TestBase {
+public class TC_006_Update_Address extends TestBase {
 
 	
 	
@@ -23,7 +23,7 @@ public class TC_006_Address extends TestBase {
         js.executeScript("window.scrollBy(0,550)", "");
         WebElement fname = address_Pages.getFname();
         fname.clear();
-        fname.sendKeys("jyo");
+        fname.sendKeys("naveen");
         WebElement lastname = address_Pages.getLastname();
         lastname.clear();
         lastname.sendKeys("thi");
@@ -37,7 +37,7 @@ public class TC_006_Address extends TestBase {
         js.executeScript("window.scrollBy(0,350)", "");
         WebElement addres_box = address_Pages.getAddres_box();
         addres_box.clear();
-        addres_box.sendKeys("siva");
+        addres_box.sendKeys("padmavathi");
         WebElement save = address_Pages.getSave();
 		js.executeScript("arguments[0].scrollIntoView();",save);
 		save.click();
@@ -56,6 +56,7 @@ public class TC_006_Address extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,450)", "");
         Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         address_Pages.getUpdate().click();
         WebElement fname = address_Pages.getFname();
         fname.clear();
@@ -80,6 +81,7 @@ public class TC_006_Address extends TestBase {
 		alert.accept();
 		
 	}
+	
 	
 	
 }

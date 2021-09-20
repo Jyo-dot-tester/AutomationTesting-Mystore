@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-<listeners>
-    <listener class-name="com.qa.utility.TestListener"></listener>
-</listeners>
-  <test thread-count="5" name="Test" parallel="classes">
-    <classes>
-        <class name="com.qa.testscript.TC_005_AddToCart"></class>
-        <class name="com.qa.testscript.Tc_006_Product_remove_cart"></class> 
-        <class name="com.qa.testscript.TC_006_Address"></class>
-        <class name="com.qa.testscript.TC_007_Update_Password"></class>
-    </classes>
-  </test> <!-- Test -->
+<suite parallel="classes" name="Suite">
+	<listeners>
+		<listener class-name="com.qa.utility.TestListener"></listener>
+	</listeners>
+	<test thread-count="5" parallel="classes" name="Test">
+		<classes>
+			<class name="com.qa.testscript.TC_001_Search_item" />
+			<class name="com.qa.testscript.TC_002_OrderProduct" />
+			<class name="com.qa.testscript.TC_003_Wishlist" />
+			<class name="com.qa.testscript.TC_004_AddToCart" />
+			<class name="com.qa.testscript.TC_005_Product_remove_cart" />
+			<class name="com.qa.testscript.TC_006_Update_Address" />
+			<class name="com.qa.testscript.TC_007_Update_Password" />
+			<class name="com.qa.testscript.TC_008_ContactUs" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

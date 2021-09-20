@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_005_AddToCart extends TestBase {
+public class TC_004_AddToCart extends TestBase {
 	WebElement quantity;
 	String title;
 	
@@ -38,7 +38,7 @@ public class TC_005_AddToCart extends TestBase {
 	}
 	
 	@Test(dependsOnMethods ="verifyAddToCart")
-	public void SelectQuantity() throws InterruptedException
+	public void selectQuantity() throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -62,8 +62,8 @@ public class TC_005_AddToCart extends TestBase {
 			
 		}
 	}
-	@Test(dependsOnMethods ="SelectQuantity")
-	public void VerifyQuantity() throws InterruptedException
+	@Test(dependsOnMethods ="selectQuantity")
+	public void verifyQuantity() throws InterruptedException
 	{
 		
 		WebElement quantity_decre = addToCart_Pages.getQuantity_decre();
@@ -94,8 +94,8 @@ public class TC_005_AddToCart extends TestBase {
 		}
 	}
 	
-	@Test(dependsOnMethods ="VerifyQuantity")
-	public void SelectSize_color() throws InterruptedException {
+	@Test(dependsOnMethods ="verifyQuantity")
+	public void selectSize_color() throws InterruptedException {
 		Thread.sleep(2000);
 		Select drpCountry = new Select(addToCart_Pages.getSize());
 		drpCountry.selectByVisibleText("M");
@@ -123,8 +123,8 @@ public class TC_005_AddToCart extends TestBase {
 		
 	}
 	
-	@Test(dependsOnMethods ="SelectSize_color")
-	public void Verify_Cart() throws InterruptedException
+	@Test(dependsOnMethods ="selectSize_color")
+	public void verify_Cart() throws InterruptedException
 	{
 		Thread.sleep(2000);
 		driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
@@ -144,8 +144,8 @@ public class TC_005_AddToCart extends TestBase {
 		cart_ByProducts__Pages.getShipping_checkout().click();
 	}
 
-	@Test(dependsOnMethods ="Verify_Cart")
-	public void Payment() throws InterruptedException
+	@Test(dependsOnMethods ="verify_Cart")
+	public void payment() throws InterruptedException
 	{
 		Thread.sleep(2000);
 		WebElement payment = cart_ByProducts__Pages.getPayment();
@@ -157,7 +157,7 @@ public class TC_005_AddToCart extends TestBase {
 		confirm_order.click();
 	}
 	
-	@Test(dependsOnMethods ="Payment")
+	@Test(dependsOnMethods ="payment")
 	public void navigate_to_home()
 	{
 		cart_ByProducts__Pages.getBack_to_order().click();

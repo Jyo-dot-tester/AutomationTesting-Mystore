@@ -16,7 +16,7 @@ public class Address_Pages {
 	@FindBy(xpath ="//a[@title='Addresses']")
 	WebElement myaddrs;
 	
-	@FindBy(xpath ="//a[@title='Update']")
+	@FindBy(xpath ="//*[@id=\"center_column\"]/div[1]/div/div[1]/ul/li[9]/a[1]")
 	WebElement update;
 	
 	@FindBy(name ="firstname")

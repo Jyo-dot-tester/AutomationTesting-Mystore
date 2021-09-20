@@ -1,8 +1,4 @@
 package com.qa.testscript;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-<<<<<<< HEAD
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -14,7 +10,12 @@ import org.testng.annotations.BeforeClass;
 import com.qa.pages.AddToCart_Pages;
 import com.qa.pages.Address_Pages;
 import com.qa.pages.Cart_ByProducts__Pages;
+import com.qa.pages.OrderProduct_Page;
+import com.qa.pages.Search_pages;
 import com.qa.pages.Update_Password_Pages;
+import com.qa.pages.Whishlist_Page;
+import com.qa.pages.Signout_Pages;
+import com.qa.pages.Contactus_Pages;
 
 public class TestBase {
 	public WebDriver driver;
@@ -22,6 +23,11 @@ public class TestBase {
     Cart_ByProducts__Pages cart_ByProducts__Pages;
     Address_Pages address_Pages;
     Update_Password_Pages update_Password_Pages;
+    Whishlist_Page wish;
+	Search_pages sp;
+	OrderProduct_Page order;
+	Contactus_Pages sp1;
+	Signout_Pages signout_Pages;
     @BeforeClass
 	public void setup(ITestContext context)
 	{
@@ -35,7 +41,13 @@ public class TestBase {
 		cart_ByProducts__Pages=new Cart_ByProducts__Pages(driver);
 		address_Pages=new Address_Pages(driver);
 		update_Password_Pages=new Update_Password_Pages(driver);
+		wish=new Whishlist_Page(driver);
+		sp=new Search_pages(driver);
+		order=new OrderProduct_Page(driver);
+	    sp1 = new Contactus_Pages(driver);
+	    signout_Pages=new Signout_Pages(driver);
 		context.setAttribute("WebDriver", driver);
+		//Signin mystoreapp
 		addToCart_Pages.getSignin().click();
 		addToCart_Pages.getEmail().sendKeys("sai10091997@gmail.com");
 		addToCart_Pages.getPassword().sendKeys("596844");
@@ -49,12 +61,11 @@ public class TestBase {
     @AfterClass
 	public void teardown() throws InterruptedException
 	{
+    	//Signout
+    	signout_Pages.getSignOut().click();
     	Thread.sleep(3000);
 		driver.close();
+		
 	}
-=======
-import org.testng.annotations.AfterClass;
-
-import org.testng.annotations.BeforeClass;
->>>>>>> 62e6ccc8986a05eb54d56110bd514a40faf3a7a2
+}
 

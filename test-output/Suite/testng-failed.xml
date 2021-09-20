@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.qa.utility.TestListener"/>
   </listeners>
   <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="com.qa.testscript.Tc_006_Product_remove_cart">
+      <class name="com.qa.testscript.TC_002_OrderProduct">
         <methods>
-          <include name="teardown"/>
-          <include name="delete_item_cart"/>
           <include name="setup"/>
+          <include name="buyProduct"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.testscript.Tc_006_Product_remove_cart -->
-      <class name="com.qa.testscript.TC_006_Address">
+      </class> <!-- com.qa.testscript.TC_002_OrderProduct -->
+      <class name="com.qa.testscript.TC_004_AddToCart">
         <methods>
-          <include name="add_new_address"/>
-          <include name="teardown"/>
+          <include name="selectQuantity"/>
+          <include name="navigate_to_home"/>
           <include name="setup"/>
-          <include name="delete_address"/>
-          <include name="update_Address"/>
+          <include name="verifyAddToCart"/>
+          <include name="verifyQuantity"/>
+          <include name="payment"/>
+          <include name="selectSize_color"/>
+          <include name="verify_Cart"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.testscript.TC_006_Address -->
+      </class> <!-- com.qa.testscript.TC_004_AddToCart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
