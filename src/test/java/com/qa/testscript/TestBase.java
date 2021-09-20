@@ -1,5 +1,8 @@
 package com.qa.testscript;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+<<<<<<< HEAD
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -49,5 +52,9 @@ public class TestBase {
     	Thread.sleep(3000);
 		driver.close();
 	}
+=======
+import org.testng.annotations.AfterClass;
 
-}
+import org.testng.annotations.BeforeClass;
+>>>>>>> 62e6ccc8986a05eb54d56110bd514a40faf3a7a2
+
