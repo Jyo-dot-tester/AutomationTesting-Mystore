@@ -6,7 +6,7 @@
 	</listeners>
 	<test thread-count="5" parallel="classes" name="Test">
 		<classes>
-			<class name="com.qa.testscript.TC_001_Search_item" />
+			 <class name="com.qa.testscript.TC_001_Search_item" /> 
 			<class name="com.qa.testscript.TC_002_OrderProduct" />
 			<class name="com.qa.testscript.TC_003_Wishlist" />
 			<class name="com.qa.testscript.TC_004_AddToCart" />
@@ -14,6 +14,7 @@
 			<class name="com.qa.testscript.TC_006_Update_Address" />
 			<class name="com.qa.testscript.TC_007_Update_Password" />
 			<class name="com.qa.testscript.TC_008_ContactUs" />
+			<class name="com.qa.testscript.TC_009_Registration"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

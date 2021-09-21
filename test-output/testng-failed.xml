@@ -6,26 +6,20 @@
   </listeners>
   <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="com.qa.testscript.TC_002_OrderProduct">
+      <class name="com.qa.testscript.TC_008_ContactUs">
         <methods>
           <include name="setup"/>
-          <include name="buyProduct"/>
+          <include name="supportTest"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.testscript.TC_002_OrderProduct -->
-      <class name="com.qa.testscript.TC_004_AddToCart">
+      </class> <!-- com.qa.testscript.TC_008_ContactUs -->
+      <class name="com.qa.testscript.TC_009_Registration">
         <methods>
-          <include name="selectQuantity"/>
-          <include name="navigate_to_home"/>
           <include name="setup"/>
-          <include name="verifyAddToCart"/>
-          <include name="verifyQuantity"/>
-          <include name="payment"/>
-          <include name="selectSize_color"/>
-          <include name="verify_Cart"/>
+          <include name="Account"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.testscript.TC_004_AddToCart -->
+      </class> <!-- com.qa.testscript.TC_009_Registration -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

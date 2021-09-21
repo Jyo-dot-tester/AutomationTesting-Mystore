@@ -1,26 +1,22 @@
 package com.qa.testscript;
-<<<<<<< HEAD
 import java.util.concurrent.TimeUnit;
-=======
->>>>>>> 3bce4fe18223f46f6adc934af941ecb7b94df505
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-<<<<<<< HEAD
 import com.qa.pages.AddToCart_Pages;
 import com.qa.pages.Address_Pages;
 import com.qa.pages.Cart_ByProducts__Pages;
+import com.qa.pages.Contactus_Pages;
 import com.qa.pages.OrderProduct_Page;
+import com.qa.pages.Registration_Pages;
 import com.qa.pages.Search_pages;
+import com.qa.pages.Signout_Pages;
 import com.qa.pages.Update_Password_Pages;
 import com.qa.pages.Whishlist_Page;
-import com.qa.pages.Signout_Pages;
-import com.qa.pages.Contactus_Pages;
 
 public class TestBase {
 	public WebDriver driver;
@@ -33,6 +29,7 @@ public class TestBase {
 	OrderProduct_Page order;
 	Contactus_Pages sp1;
 	Signout_Pages signout_Pages;
+	Registration_Pages sp3;
     @BeforeClass
 	public void setup(ITestContext context)
 	{
@@ -51,6 +48,7 @@ public class TestBase {
 		order=new OrderProduct_Page(driver);
 	    sp1 = new Contactus_Pages(driver);
 	    signout_Pages=new Signout_Pages(driver);
+	    sp3=new Registration_Pages(driver);
 		context.setAttribute("WebDriver", driver);
 		//Signin mystoreapp
 		addToCart_Pages.getSignin().click();
@@ -73,30 +71,4 @@ public class TestBase {
 		
 	}
 }
-=======
-import com.qa.pages.support_pages;
 
-public class TestBase<signin_pages> {
-
-	static WebDriver driver;
-	
-	support_pages support_pages ;
-
-@BeforeClass
-public WebDriver setup() {
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Meghana\\Desktop\\selenium software\\chromedriver.exe");
-	driver=new ChromeDriver();
-	driver.get("http://automationpractice.com/index.php");
-	return driver;
-	
-}
-	
-	   @AfterClass
-	    public void tearDown() {
-	    	//close browser
-	    	driver.close();
-	    }
->>>>>>> 3bce4fe18223f46f6adc934af941ecb7b94df505
-
-	  
-}
